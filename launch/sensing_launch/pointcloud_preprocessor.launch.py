@@ -27,23 +27,27 @@ from launch_ros.descriptions import ComposableNode
 
 def launch_setup(context, *args, **kwargs):
     # set concat filter as a component
-    concat_component_raw = ComposableNode(
+    concat_component_raw= ComposableNode(
         package="pointcloud_preprocessor",
-        plugin="pointcloud_preprocessor::PointCloudConcatenateDataSynchronizerOusterComponent",
-        name="concatenate_data_raw",
-        remappings=[("output", "concatenated/pointcloud_raw")],
+        plugin="pointcloud_preprocessor::CropBoxFilterComponent",
+        name="crop_box_filter",
+        remappings=[
+            ("input", "/sensing/lidar/top/ouster/points"),
+            ("output", "concatenated/pointcloud"),
+        ],
         parameters=[
             {
-                "input_topics": [
-                    "/sensing/lidar/front_left/ouster/points",
-                    "/sensing/lidar/rear_right/ouster/points",
-                    "/sensing/lidar/front_right/ouster/points",
-                    "/sensing/lidar/rear_left/ouster/points",
-                ],
-                "output_frame": 'sensor_kit_base_link',
+                "input_frame": LaunchConfiguration("base_frame"),
+                "output_frame": LaunchConfiguration("base_frame"),
+                "min_x": -1.0,
+                "max_x": 1.0,
+                "min_y": -0.5,
+                "max_y": 0.5,
+                "min_z": -0.5,
+                "max_z": 1.8,
+                "negative": True,
             }
         ],
-        extra_arguments=[{"use_intra_process_comms": LaunchConfiguration("use_intra_process")}],
     )
     
     # set container to run all required components in the same process

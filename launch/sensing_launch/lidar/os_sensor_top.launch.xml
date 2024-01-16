@@ -1,7 +1,7 @@
 <launch>
 
   <arg name="ouster_ns" default="/sensing/lidar/top/ouster" />
-  <arg name="sensor_hostname" default="192.168.1.120" />
+  <arg name="sensor_hostname" default="192.168.2.120" />
   <arg name="udp_dest" default="" />
   <arg name="lidar_port" default="0" />
   <arg name="imu_port" default="0" />

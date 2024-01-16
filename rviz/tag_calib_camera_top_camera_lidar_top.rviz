@@ -96,7 +96,7 @@ Visualization Manager:
         Durability Policy: Volatile
         History Policy: Keep Last
         Reliability Policy: Best Effort
-        Value: /sensor_kit/sensor_kit_base_link/top/gmsl/tag_detections_image
+        Value: /sensor_kit/ouster_top_base_link/top/gmsl/tag_detections_image
       Value: true
     - Class: rviz_default_plugins/Camera
       Enabled: false
@@ -178,7 +178,7 @@ Visualization Manager:
         Filter size: 10
         History Policy: Keep Last
         Reliability Policy: Best Effort
-        Value: /sensing/lidar/concatenated/pointcloud_raw
+        Value: /sensing/lidar/top/ouster/points
       Use Fixed Frame: true
       Use rainbow: true
       Value: true
@@ -455,7 +455,7 @@ Visualization Manager:
         Filter size: 10
         History Policy: Keep Last
         Reliability Policy: Reliable
-        Value: /sensor_kit/sensor_kit_base_link/top/gmsl/lidartag/tag_frame
+        Value: /sensor_kit/ouster_top_base_link/top/gmsl/lidartag/tag_frame
       Value: true
     - Class: rviz_default_plugins/MarkerArray
       Enabled: true
@@ -467,7 +467,7 @@ Visualization Manager:
         Durability Policy: Volatile
         History Policy: Keep Last
         Reliability Policy: Reliable
-        Value: /sensor_kit/sensor_kit_base_link/top/gmsl/lidartag/id_markers
+        Value: /sensor_kit/ouster_top_base_link/top/gmsl/lidartag/id_markers
       Value: true
     - Alpha: 1
       Autocompute Intensity Bounds: true
@@ -921,10 +921,6 @@ Visualization Manager:
       Enabled: true
       Name: Tag calib markers (filtered)
       Namespaces:
-        active_center: true
-        active_lidartag_frame: true
-        active_lidartag_id: true
-        active_lidartag_status: true
         calibration_status: true
         calibration_zone: true
         converged_apriltag_frame: true
@@ -937,7 +933,7 @@ Visualization Manager:
         Durability Policy: Volatile
         History Policy: Keep Last
         Reliability Policy: Reliable
-        Value: /sensor_kit/sensor_kit_base_link/top/gmsl/filtered_projections
+        Value: /sensor_kit/ouster_top_base_link/top/gmsl/filtered_projections
       Value: true
     - Alpha: 1
       Autocompute Intensity Bounds: true
@@ -1170,10 +1166,10 @@ Visualization Manager:
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: 0.4153982996940613
+      Pitch: 0.3703983426094055
       Target Frame: <Fixed Frame>
       Value: XYOrbit (rviz_default_plugins)
-      Yaw: 3.1017682552337646
+      Yaw: 3.2617690563201904
     Saved: ~
 Window Geometry:
   Camera:

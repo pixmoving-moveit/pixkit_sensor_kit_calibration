@@ -49,7 +49,7 @@ def generate_launch_description():
 
     args, unknown = parser.parse_known_args(sys.argv[4:])
 
-    usb_cam_dir = get_package_share_directory('robobus_sensor_kit_launch')
+    usb_cam_dir = get_package_share_directory('pixkit_sensor_kit_launch')
   
     node_name = args.node_name
     # get path to params file
@@ -63,7 +63,7 @@ def generate_launch_description():
         "image_width": 1920 ,
         "image_height": 1080,
         "camera_name": "camera_front_3mm",
-        "camera_info_url": "file://${ROS_HOME}/../pix/parameter/sensor_kit/robobus_sensor_kit_description/intrinsic_parameters/camera_front_3mm.yaml",
+        "camera_info_url": "file://${ROS_HOME}/../pix/parameter/sensor_kit/pixkit_sensor_kit_description/intrinsic_parameters/camera_front_3mm.yaml",
         # reusing same camera intrinsics only for demo, should really be unique for camera2"
         "brightness": -1,
         "contrast": -1,

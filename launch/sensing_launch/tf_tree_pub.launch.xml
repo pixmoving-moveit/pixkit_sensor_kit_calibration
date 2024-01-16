@@ -1,6 +1,6 @@
 <launch>
-	<arg name="vehicle_model" default="robobus" description="vehicle model name"/>
-	<arg name="sensor_model" default="robobus_sensor_kit" description="sensor model name"/>
+	<arg name="vehicle_model" default="pixkit" description="vehicle model name"/>
+	<arg name="sensor_model" default="pixkit_sensor_kit" description="sensor model name"/>
 	<arg name="config_dir" default="$(find-pkg-share $(var sensor_model)_description)/config" description="path to dir where sensors_calibration.yaml, etc. are located"/>
 	<!-- <arg name="model_file_ouster" default="ouster.xacro" description="path to the file of model settings (*.xacro)"/> -->
 	<let name="model_file" value="$(find-pkg-share tier4_vehicle_launch)/urdf/vehicle.xacro" />
